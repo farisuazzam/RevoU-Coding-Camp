@@ -3,7 +3,7 @@ welcomeMessage();
 /// Welcome Message
 function welcomeMessage() {
     /// Prompt user for their name
-    let username = prompt("Enter your name:");
+    let username = prompt("Siapa nama anda:");
     /// If a name is entered, display it in the header; otherwise, show a default message
     if (username) {
 
@@ -12,7 +12,7 @@ function welcomeMessage() {
     } else {
 
         /// If no name is entered, show a default welcome message
-        alert("Welcome to my portfolio!");
+        alert("Selamat datang di website saya!");
     }
 }
 
@@ -26,9 +26,9 @@ function validateForm() {
     /// Simple validation
     if (name === "" || email === "" || message === "") {
         /// If any field is empty, show an alert
-        alert("Please fill in all fields.");
+        alert("Silakan isi semua kolom.");
     } else {
         /// If all fields are filled, show a success message
-        alert(`Thanks, ${name}! Form submitted successfully!`);
+        alert(`Terima kasih, ${name}! Form berhasil dikirim!`);
     }
 }

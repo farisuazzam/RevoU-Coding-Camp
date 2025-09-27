@@ -2,92 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Yama</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Faris</title>
 
-    <!-- CSS External -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
-    <!-- Header Content -->
-    <header class="main-header">
-        <!-- Logo Website -->
-        <div class="logo"></div>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-        <!-- Navigation Menu -->
-        <nav>
-            <ul class="flex h-[100%] items-center gap-[2px]">
-                <li><a class="border p-[8px] rounded" href="#home">Home</a></li>
-                <li><a class="border p-[8px] rounded" href="#profile">Profile</a></li>
-                <li><a class="border p-[8px] rounded" href="#portfolio">Portfolio</a></li>
-                <li><a class="border p-[8px] rounded" href="#message-us">Message Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header class="main-header flex items-center justify-between px-6 py-4 bg-white shadow-md">
+    <div class="logo"></div>
 
-    <hr>
+    <nav>
+      <ul class="flex gap-4">
+        <li><a class="px-4 py-2 rounded hover:bg-blue-100 transition" href="#home">Home</a></li>
+        <li><a class="px-4 py-2 rounded hover:bg-blue-100 transition" href="#profile">Profile</a></li>
+        <li><a class="px-4 py-2 rounded hover:bg-blue-100 transition" href="#portfolio">Portfolio</a></li>
+        <li><a class="px-4 py-2 rounded hover:bg-blue-100 transition" href="#message-us">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="min-h-[100vh] flex flex-col justify-center items-center gap-[20px]">
-            <h1 class="text-[36px] font-bold">Welcome <span id="username"></span> to My Portfolio</h1>
-            <p class="text-[18px]">This is the home section of my portfolio website.</p>
-        </section>
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8 space-y-16">
 
-        <hr>
+    <!-- Home Section -->
+    <section id="home" class="text-center space-y-4">
+      <h1 class="text-4xl font-bold">Welcome <span id="username" class="text-blue-600"></span> to My Portfolio</h1>
+      <p class="text-lg">Ini bagian utama portofolio saya.</p>
+    </section>
 
-        <!-- Profile Section -->
-        <section id="profile" class="min-h-[100vh] flex flex-col justify-center items-center gap-[20px]">
-            <h2 class="text-[30px] font-bold">Profile</h2>
-            <p class="text-[18px]">This section contains my profile information.</p>
-        </section>
+    <!-- Profile Section -->
+    <section id="profile" class="text-center space-y-4">
+      <h2 class="text-3xl font-bold">Profile</h2>
+      <p class="text-lg">Ini bagian yang berisi informasi profil saya.</p>
+    </section>
 
-        <hr>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="text-center space-y-4">
+      <h2 class="text-3xl font-bold">Portfolio</h2>
+      <p class="text-lg">Ini bagian yang menampilkan proyek dan karya saya.</p>
+    </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="min-h-[100vh] flex flex-col justify-center items-center gap-[20px]">
-            <h2 class="text-[30px] font-bold">Portfolio</h2>
-            <p class="text-[18px]">This section showcases my projects and work.</p>
-        </section>
+    <!-- Message Us Section -->
+    <section id="message-us" class="text-center space-y-6">
+      <h2 class="text-3xl font-bold">Message Us</h2>
+      <form class="max-w-md mx-auto space-y-4">
+        <div>
+          <label for="name" class="block mb-1 font-medium">Nama:</label>
+          <input type="text" id="name" name="name" class="w-full border rounded px-4 py-2" required />
+        </div>
+        <div>
+          <label for="email" class="block mb-1 font-medium">Email:</label>
+          <input type="email" id="email" name="email" class="w-full border rounded px-4 py-2" required />
+        </div>
+        <div>
+          <label for="message" class="block mb-1 font-medium">Pesan:</label>
+          <textarea id="message" name="message" class="w-full border rounded px-4 py-2 h-24" required></textarea>
+        </div>
+        <button type="button" onclick="validateForm()"
+        class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition transform hover:scale-105">
+        Send
+        </button>
+      </form>
+    </section>
 
-        <hr>
+  </main>
 
-        <!-- Message Us Section -->
-        <section id="message-us" class="min-h-[100vh] flex flex-col justify-center items-center gap-[20px]">
-            <h2 class="text-[30px] font-bold">Message Us</h2>
-            <form>
-                <div class="mb-[10px]">
-                    <label for="name" class="block mb-[5px]">Name:</label>
-                    <input type="text" id="name" name="name" class="border p-[8px] rounded w-[300px]" required>
-                </div>
-                <div class="mb-[10px]">
-                    <label for="email" class="block mb-[5px]">Email:</label>
-                    <input type="email" id="email" name="email" class="border p-[8px] rounded w-[300px]" required>
-                </div>
-                <div class="mb-[10px]">
-                    <label for="message" class="block mb-[5px]">Message:</label>
-                    <textarea id="message" name="message" class="border p-[8px] rounded w-[300px] h-[100px]"
-                        required></textarea>
-                </div>
-                <button type="button" onclick="validateForm()"
-                    class="bg-blue-500 text-white p-[10px] rounded hover:bg-blue-600">Send</button>
-            </form>
-        </section>
-    </main>
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center py-4">
+    <p>© 2025 Faris's Portfolio. All rights reserved.</p>
+  </footer>
 
-    <!-- Footer Content -->
-    <footer>
-        <p class="text-center p-[20px] bg-gray-200">© 2025 Yama's Portfolio. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript External -->
-    <script src="js/script.js"></script>
+  <!-- External JS -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>
